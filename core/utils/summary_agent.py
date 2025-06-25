@@ -34,7 +34,7 @@ def summarize_chunks(state: SummaryState) -> SummaryState:
                 model="gpt-4o",
                 messages=[
                     {"role": "system", "content": "You are an expert assistant who summarizes content concisely and clearly for the targeted audience."},
-                    {"role": "user", "content": f"Summarize this content in up to 150 words:\n\n{chunk}"}
+                    {"role": "user", "content": f"Summarize this content:\n\n{chunk}"}
                 ],
                 max_tokens=150,
                 temperature=0.7
@@ -54,8 +54,8 @@ def generate_narrative(state: SummaryState) -> SummaryState:
         response = client.chat.completions.create(
             model="gpt-4o",
             messages=[
-                {"role": "system", "content": "You are an expert assistant that transforms technical summaries into an engaging, human-friendly narrative for non-expert readers. Use clear language, logical transitions, and avoid unnecessary jargon."},
-                {"role": "user", "content": f"Create a cohesive narrative (up to 500 words) from these summaries:\n\n{full_text}"}
+                {"role": "system", "content": "You are an expert assistant that transforms summaries into an engaging, human-friendly narrative for non-expert readers. Use clear language, logical transitions, and avoid unnecessary jargon."},
+                {"role": "user", "content": f"Create a cohesive narrative from these summaries:\n\n{full_text}"}
             ],
             max_tokens=500,
             temperature=0.8
