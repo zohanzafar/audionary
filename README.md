@@ -58,8 +58,9 @@ Watch the demo: [YouTube Demo Link](https://youtu.be/XN-Nw4oxqlI?si=ZmGH43JZRdWy
 audionary/
 ├── core/                 # Django API  
 │   ├── views.py  
-│   ├── serializers.py  
+│   ├── urls.py  
 │   └── utils/            # Text extraction, summarization, audio   
+├── config/               # Project Dir
 ├── media/                # Audio output files  
 ├── static/               # Static frontend assets  
 ├── templates/            # HTML templates  
@@ -159,12 +160,7 @@ pip install -r requirements.txt
 
 ## UI Screenshots
 
-Place your screenshots in a `screenshots/` folder inside the project, and embed them here:
-
-Example:
-
 ![Home Page](screenshots/homepage.png)  
-![Upload Page](screenshots/upload.png)  
 ![Summary and Audio](screenshots/output.png)
 
 ---
